@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Über Webshop{% endblock %}
+
+{% block logo %}Über Webshop{% endblock %}
+
+{% block content %}
+    <h2>Sellers</h2>
+    {% for seller in sellers %}
+        <h3><a href="{% url 'seller_details' seller.id %}">{{ seller.username }}</a></h3>
+    {% endfor %}
+{% endblock %}

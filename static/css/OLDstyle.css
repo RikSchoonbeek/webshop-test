@@ -1,0 +1,111 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.main-header {
+    background-color: #333333;
+    padding: 20px;
+    font-family:  'Kanit', sans-serif;
+    text-align: center;
+}
+
+.name {
+    margin-top: 0;
+}
+
+.name a {
+    color: white;
+    font-weight: 500;
+}
+
+.main-nav {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2em;
+    margin: 0 0 5px 0;
+}
+
+.main-nav li {
+    padding: 2px 5px;
+}
+
+.rik-link {
+    color: #ECB91F;
+}
+
+.blog-link {
+    color: #EC4D3A;
+}
+
+.contact-link {
+    color: #45AFC0;
+}
+
+.main-nav a:hover {
+    color: white;
+}
+
+/* ---- Layout Containers ---- */
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-footer {
+    background-color: #333333;
+    font-family:  'Kanit', sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 120px;  /* This also sets the main-footer height */
+    color: white;
+}
+
+.stickyf-wrapper {
+    min-height: 100%;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -120px;
+}
+
+.push {
+    height: 120px;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+/* ---- Page Elements ---- */
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+}
+
+@media (min-width: 1025px) {
+}

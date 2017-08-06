@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Über Web Shop</title>
+
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+
+<body>
+    <div class="stickyf-wrapper">
+        <header class="main-header">
+        <div class="wrapper">
+          <h1 class="name"><a href="#">{% block logo %}{% endblock %}</a></h1>
+          <ul class="main-nav">
+            <li><a class="rik-link" href="{% url 'home' %}">Home</a></li>
+            <li><a class="blog-link" href="{% url 'all_products' %}">All products</a></li>
+            <li><a class="contact-link" href="{% url 'show_food' 'food' %}">Food</a></li>
+            <li><a class="rik-link" href="{% url 'show_non_food' 'non-food' %}">Non-food</a></li>
+            <li><a class="blog-link" href="{% url 'sellers' %}">Sellers</a></li>
+          </ul>
+        </div><!--/.wrapper-->
+        </header><!--/.main-header-->
+
+        <!-- Main content container/wrapper -->
+        <div class="wrapper main-content">
+            {% block content %}{% endblock %}
+        </div><!--/.wrapper-->
+
+        <div class="push"></div>
+    </div> <!--/.stickyf-wrapper-->
+  
+	<footer class="main-footer">
+    <div class="wrapper">
+		  <span>&copy;2017 - Rik Schoonbeek</span>
+    </div><!--/.wrapper-->
+	</footer>
+
+</body>
+</html>

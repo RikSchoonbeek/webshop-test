@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Über Webshop - {{ product.name }}{% endblock %}
+
+{% block logo %}Über Webshop{% endblock %}
+
+{% block content %}
+        <h2>{{ product.name }}</h2>
+        {{ product.description|linebreaks  }}
+        <p>Prijs: €{{ product.price }}</p>
+        <p>Op voorraad: {{ product.stock }}</p>
+<p>Verkoper: <a href="{% url 'seller_details' product.seller.id %}">{{ product.seller }}</a></p>
+{% endblock %}

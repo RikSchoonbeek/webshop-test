@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+
+    {% load static %}
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+
+<body>
+	
+	<header class="main-header clearfix">
+    <div class="wrapper">
+        <h1 class="name"><a href="#">{% block logo %}{% endblock %}</a></h1>
+        <ul class="main-nav">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'all_products' %}">All products</a></li>
+            <li><a href="{% url 'show_food' 'food' %}">Food</a></li>
+            <li><a href="{% url 'show_non_food' 'non-food' %}">Non-food</a></li>
+            <li><a href="{% url 'sellers' %}">Sellers</a></li>
+      </ul>
+    </div><!--/.wrapper-->	
+	</header><!--/.main-header-->
+	
+  <div class="wrapper clearfix" id="main-wrapper">
+    {% block content %}{% endblock %}
+  </div><!--/.wrapper-->	
+  
+	<footer class="main-footer">
+    <div class="wrapper">
+		  <span>&copy;2017 - Rik Schoonbeek</span>
+    </div><!--/.wrapper-->	
+	</footer>
+	
+</body>
+</html>
